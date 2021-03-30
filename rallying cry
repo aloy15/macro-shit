@@ -1,0 +1,12 @@
+game.dnd5e.rollItemMacro("Second Wind");
+
+ChatMessage.create({
+    content:`If you have selected your targets for rallying cry press the button 
+    <button id="rallyingCryYON">Rallying cry</button>`});
+
+setTimeout( ()=>{
+  document.getElementById(`rallyingCryYON`).addEventListener("click",()=>
+    {
+    game.dnd5e.rollItemMacro("rallying cry")
+    });
+  }, 1000);
